@@ -1,0 +1,36 @@
+
+<span class="container">
+  <span class="entity-table-panel">
+    <span class="entity-table-actions">
+      <h5>Hosts</h5>
+    <button class="btn btn-outline-primary btn-sm" (click)="showCreate()">Create</button>
+      <button class="btn btn-outline-primary btn-sm" (click)="showEdit()" [disabled]="!isSelected()">Edit</button>
+      <button class="btn btn-outline-primary btn-sm" (click)="delete()" [disabled]="!isSelected()">Delete</button>
+
+    </span>
+
+    <span class="entity-table">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let host of hosts | async">
+          <td class="test" (click)="onSelect(host)" [class.table-active]="host == selectedHost">{{host.name}}</td>
+
+        </tr>
+        </tbody>
+      </table>
+     </div>
+      </span>
+  </span>
+  <span class="property-panel">
+    <app-host-detail [host]="selectedHost"></app-host-detail>
+
+  </span>
+</span>
+
+

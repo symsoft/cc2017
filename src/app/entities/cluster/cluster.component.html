@@ -1,0 +1,33 @@
+<span class="container">
+  <span class="entity-table-panel">
+    <span class="entity-table-actions">
+      <h5>Clusters</h5>
+    <button class="btn btn-outline-primary btn-sm" (click)="showCreate()">Create</button>
+      <button class="btn btn-outline-primary btn-sm" (click)="showEdit()" [disabled]="!isSelected()">Edit</button>
+      <button class="btn btn-outline-primary btn-sm" (click)="delete()" [disabled]="!isSelected()">Delete</button>
+
+    </span>
+
+    <span class="entity-table">
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let cluster of clusters | async">
+          <td class="test" (click)="onSelect(cluster)" [class.table-active]="cluster == selectedCluster">{{cluster.name}}</td>
+
+        </tr>
+        </tbody>
+      </table>
+     </div>
+      </span>
+  </span>
+  <span class="property-panel">
+    <app-cluster-detail [cluster]="selectedCluster"></app-cluster-detail>
+
+  </span>
+</span>

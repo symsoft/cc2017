@@ -1,0 +1,59 @@
+.container {
+  display: flex; /* or inline-flex */
+  flex-direction: row;
+  flex: 1 0 auto;
+  margin-top: 1em;
+
+}
+
+.entity-header {
+  flex: 1 1 auto;
+}
+
+.entity-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+
+.entity-table-panel {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.entity-table-actions {
+
+}
+
+.entity-table {
+  overflow-y: auto;
+  max-height: 600px;
+  font-size:14px;
+  margin-top: 1em;
+}
+
+
+tr {
+  line-height: 25px;
+  min-height: 25px;
+  height: 25px;
+}
+
+.property-panel {
+  flex: 1 1 auto;
+  margin: 1em;
+
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+
+
+

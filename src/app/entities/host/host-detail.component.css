@@ -1,0 +1,24 @@
+.property-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.basic-properties {
+  display: flex;
+  flex: 0 0 auto;
+}
+
+.label {
+  flex: 2 1 auto;
+  font-size: 14px;
+}
+
+.value {
+  flex: 1 1 auto;
+  font-size: 14px;
+}
+
+.local-ip-table {
+  flex: 1 1 auto;
+  font-size: 14px;
+}

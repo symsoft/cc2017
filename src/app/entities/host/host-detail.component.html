@@ -1,0 +1,34 @@
+<label style="font-weight: bold; font-size: 16px">Properties</label>
+
+<div class="property-container">
+  <div class="basic-properties">
+
+    <div class="label">
+      <label>Name:</label>
+    </div>
+    <div class="value">
+      <label>{{host?.name}}</label>
+    </div>
+
+
+  </div>
+  <div class="local-ip-table">
+    Local IP Addresses
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>IP address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ipAddr of localIpAddresses | async">
+            <td>{{ipAddr.name}}</td>
+            <td>{{ipAddr.ipAddr}}</td>
+          </tr>
+        </tbody>
+      </table>
+     </div>
+  </div>
+</div>
