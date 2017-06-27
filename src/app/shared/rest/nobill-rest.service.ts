@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {ReplaySubject} from 'rxjs/ReplaySubject';
 import {Identifiable} from './Identifiable';
-
+import { environment } from '../../../environments/environment';
 
 export class NobillRestService<T extends Identifiable> {
   private url;
@@ -16,8 +16,8 @@ export class NobillRestService<T extends Identifiable> {
   protected dataStore: T[] = null;
   private httpService: Http;
 
-  constructor(url: string, http: Http) {
-    this.url = url;
+  constructor(path: string, http: Http) {
+    this.url = environment.restServerBaseUrl + path;
     this.headers = new Headers({'Content-Type': 'application/json',
     'Accept': 'application/json',
       'Authorization': 'Basic ' + btoa('babtist:2lfager')});

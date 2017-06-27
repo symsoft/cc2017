@@ -7,7 +7,7 @@ import {Host} from './host';
 export class HostService extends NobillRestService<Host> {
 
   constructor(private http: Http) {
-    super('https://10.151.0.101:8080/api/hosts', http);
+    super('hosts', http);
   }
 
 }

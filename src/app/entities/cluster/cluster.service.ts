@@ -7,7 +7,7 @@ import {Cluster} from './cluster';
 export class ClusterService extends NobillRestService<Cluster> {
 
   constructor(private http: Http) {
-    super('https://10.151.0.101:8080/api/clusters', http);
+    super('clusters', http);
   }
 
 }
