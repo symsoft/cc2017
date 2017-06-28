@@ -35,7 +35,7 @@ export class ClusterComponent implements OnInit {
   }
 
   showEdit() {
-    const disposable = this.dialogService.addDialog(ClusterCreateComponent, this.selectedCluster)
+    const disposable = this.dialogService.addDialog(ClusterCreateComponent, this.service.clone(this.selectedCluster))
       .subscribe((cluster) => {
         if (cluster) {
           // We get dialog result
@@ -57,11 +57,13 @@ export class ClusterComponent implements OnInit {
   }
 
   update(cluster: Cluster) {
-    this.service.update(cluster);
+    this.service.update(cluster).subscribe(() => this.clusters = this.service.findAll(),
+      error => alert(error));
   }
 
   create(cluster: Cluster) {
-    this.service.create(cluster);
+    this.service.create(cluster).subscribe(() => this.clusters = this.service.findAll(),
+      error => alert(error));
   }
 
   isSelected() {

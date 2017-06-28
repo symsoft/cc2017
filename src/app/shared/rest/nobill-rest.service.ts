@@ -93,7 +93,7 @@ export class NobillRestService<T extends Identifiable> {
         this.collection.next(this.dataStore);
         completion.next(d);
         completion.complete();
-      }, error => console.log(error));
+      }, error => completion.error(error));
     return completion;
   }
 

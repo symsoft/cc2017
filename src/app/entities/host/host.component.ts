@@ -29,7 +29,7 @@ export class HostComponent implements OnInit {
   }
 
   showEdit() {
-    const disposable = this.dialogService.addDialog(HostCreateComponent, this.selectedHost)
+    const disposable = this.dialogService.addDialog(HostCreateComponent, this.service.clone(this.selectedHost))
       .subscribe((host) => {
         // We get dialog result
         if (host) {
@@ -51,11 +51,13 @@ export class HostComponent implements OnInit {
   }
 
   update(host: Host) {
-    this.service.update(host);
+    this.service.update(host).subscribe(() => this.hosts = this.service.findAll(),
+      error => alert(error));
   }
 
   create(host: Host) {
-    this.service.create(host);
+    this.service.create(host).subscribe(() => this.hosts = this.service.findAll(),
+      error => alert(error));
   }
 
   delete(host: Host) {
