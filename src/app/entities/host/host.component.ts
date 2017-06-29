@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
 import {HostService} from "./host.service";
 import {Observable} from "rxjs/Observable";
 import { DialogService } from "ng2-bootstrap-modal";
@@ -15,9 +14,7 @@ export class HostComponent implements OnInit {
   private hosts: Observable<Host[]>;
   private selectedHost: Host;
 
-  constructor(private router: Router,
-              private route: ActivatedRoute,
-              private service: HostService,
+  constructor(private service: HostService,
               private dialogService: DialogService) { }
 
   ngOnInit() {

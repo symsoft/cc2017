@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
 import {ClusterService} from "./cluster.service";
 import {Observable} from "rxjs/Observable";
 import { DialogService } from "ng2-bootstrap-modal";
@@ -15,9 +14,7 @@ export class ClusterComponent implements OnInit {
   private clusters: Observable<Cluster[]>;
   private selectedCluster: Cluster;
 
-  constructor(private router: Router,
-              private route: ActivatedRoute,
-              private service: ClusterService,
+  constructor(private service: ClusterService,
               private dialogService: DialogService) { }
 
   ngOnInit() {

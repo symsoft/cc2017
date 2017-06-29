@@ -9,8 +9,8 @@ import { ClusterModule } from './entities/cluster/cluster.module';
 
 
 import { AppComponent } from './app.component';
-import {SideBarComponent} from "./sidebar.component";
-import {HostModule} from "./entities/host/host.module";
+import {SideBarComponent} from './sidebar.component';
+import {HostModule} from './entities/host/host.module';
 
 @NgModule({
   declarations: [

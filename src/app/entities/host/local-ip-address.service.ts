@@ -8,7 +8,7 @@ import {ReplaySubject} from 'rxjs/ReplaySubject';
 export class LocalIpAddressService extends NobillRestService<LocalIpAddress> {
 
   constructor(private http: Http) {
-    super('https://10.151.0.101:8080/api/local-ip-addresses', http);
+    super('local-ip-addresses', http);
   }
 
   findByHost(hostUuid: string): Observable<LocalIpAddress[]> {
