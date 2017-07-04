@@ -19,7 +19,7 @@ export class NobillRestService<T extends Identifiable> {
     this.url = environment.restServerBaseUrl + path;
     this.headers = new Headers({'Content-Type': 'application/json',
     'Accept': 'application/json',
-      'Authorization': 'Basic ' + btoa('babtist:2lfager')});
+    'Authorization': 'Basic ' + btoa( environment.restServerUserPass )});
     this.httpService = http;
     this.collection = new BehaviorSubject(<T[]>[]);
   }

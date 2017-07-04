@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  restServerBaseUrl: 'https://10.151.0.101:8080/api/'
+  restServerBaseUrl: 'https://10.151.0.101:8080/api/',
+  restServerUserPass: 'babtist:2lfager'
 };

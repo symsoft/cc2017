@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run npm install
 
-Change REST server base URL in the environments/environment.ts file
+Change REST server base URL and user credentials in the environments/environment.ts file
 
 ## Development server
 
