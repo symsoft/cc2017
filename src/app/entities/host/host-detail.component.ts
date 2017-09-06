@@ -20,7 +20,6 @@ export class HostDetailComponent implements OnInit {
 
   @Input()
   set host(host: Host) {
-    console.log('Host: ', host);
     if (host) {
       this._host = host;
       this.localIpAddresses = this.localIpAddressService.findByHost(host.uuid);

@@ -8,7 +8,7 @@ import {HostService} from './host.service';
 import { HostDetailComponent } from './host-detail.component';
 import {HostCreateComponent} from "./create-host.component";
 import {LocalIpAddressService} from "./local-ip-address.service";
-
+import {DataTableComponent} from '../../shared/components/data-table/data-table.component';
 
 
 @NgModule({
@@ -21,6 +21,7 @@ import {LocalIpAddressService} from "./local-ip-address.service";
     HostComponent,
     HostDetailComponent,
     HostCreateComponent
+    /** DataTableComponent */
   ],
   entryComponents: [
     HostCreateComponent

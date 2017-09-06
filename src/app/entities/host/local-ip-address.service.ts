@@ -15,11 +15,11 @@ export class LocalIpAddressService extends NobillRestService<LocalIpAddress> {
     const completion = new ReplaySubject(1);
     if (!this.dataStore) {
       this.loadAll(false).subscribe(() => {
-        completion.next(this.dataStore.filter(item => {console.log('ip', item); return item.parentHostUuid === hostUuid}));
+        completion.next(this.dataStore.filter(item => item.parentHostUuid === hostUuid));
         completion.complete();
       });
     } else {
-      completion.next(this.dataStore.filter(item => {console.log('ip', item); return item.parentHostUuid === hostUuid}));
+      completion.next(this.dataStore.filter(item => item.parentHostUuid === hostUuid));
       completion.complete();
     }
     return completion;

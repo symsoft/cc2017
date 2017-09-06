@@ -11,7 +11,7 @@
 
     <span class="entity-table">
     <div class="table-responsive">
-      <table class="table table-hover">
+      <table class="table table-hover table-sm">
         <thead>
           <tr>
             <th>Name</th>
@@ -25,7 +25,11 @@
         </tbody>
       </table>
      </div>
+
       </span>
+    <!---
+    <app-data-table [headers]="['Name']" [keys]="['name']" [items]="hosts" (selected)="onSelect($event)"></app-data-table>
+    -->
   </span>
   <span class="property-panel">
     <app-host-detail [host]="selectedHost"></app-host-detail>
