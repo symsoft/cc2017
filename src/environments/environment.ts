@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  restServerBaseUrl: 'https://10.151.0.101:8080/api/',
-  restServerUserPass: 'babtist:2lfager'
+  restServerBaseUrl: 'http://codecamp:8080/api/',
+  restServerUserPass: 'codecamp:2lfager'
 };
